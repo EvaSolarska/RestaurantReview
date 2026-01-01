@@ -46,7 +46,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
         claims.put("roles", userDetails.getAuthorities().stream()
                 .map(GrantedAuthority::getAuthority)
-                .map(auth -> auth.replace("ROLE_", ""))
                 .toList());
 
         return Jwts.builder()
