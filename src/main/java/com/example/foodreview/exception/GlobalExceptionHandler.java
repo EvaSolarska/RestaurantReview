@@ -86,6 +86,18 @@ public class GlobalExceptionHandler {
     }
 
     /**
+     * Handles the case when a requested resource (e.g., Restaurant, Review) is not found in the database.
+     */
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<Object> handleResourceNotFound(ResourceNotFoundException ex) {
+        return buildResponse(
+                HttpStatus.NOT_FOUND,
+                "Not Found",
+                ex.getMessage()
+        );
+    }
+
+    /**
      * Handles unexpected runtime exceptions.
      */
     @ExceptionHandler(RuntimeException.class)
@@ -105,7 +117,7 @@ public class GlobalExceptionHandler {
         return buildResponse(
                 HttpStatus.INTERNAL_SERVER_ERROR,
                 "Internal Server Error",
-                "Something went wrong on the server."
+                "Something went wrong: " + ex.getMessage()
         );
     }
 }

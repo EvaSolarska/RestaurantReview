@@ -3,6 +3,9 @@ package com.example.foodreview.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "restaurants")
 @Getter
@@ -25,5 +28,8 @@ public class Restaurant {
     private String streetNumber;
     private String city;
     private String postalCode;
-    ;
+
+    @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
+    private List<Review> reviews = new ArrayList<>();
 }
