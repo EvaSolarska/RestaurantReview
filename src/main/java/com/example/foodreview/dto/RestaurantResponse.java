@@ -22,5 +22,8 @@ public class RestaurantResponse {
     private String city;
     private String postalCode;
 
+    private Double averageRating;
+    private Integer reviewCount;
+
     private List<ReviewResponse> reviews;
 }
