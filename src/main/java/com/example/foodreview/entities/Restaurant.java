@@ -24,9 +24,16 @@ public class Restaurant {
     @Column(length = 500)
     private String description;
 
+    @Column(nullable = false)
     private String street;
+
+    @Column(nullable = false)
     private String streetNumber;
+
+    @Column(nullable = false)
     private String city;
+
+    @Column(nullable = false)
     private String postalCode;
 
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL, orphanRemoval = true)
