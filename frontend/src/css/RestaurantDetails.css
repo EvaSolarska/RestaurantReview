@@ -1,0 +1,264 @@
+.details-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.details-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.details-card {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.badge-rating {
+    padding: 10px;
+    background: #fcf3cf;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.review-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.review-actions button {
+    background: none;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 0.85rem;
+}
+
+.review-actions .text-delete {
+    color: #e74c3c;
+}
+
+.btn-delete {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.divider {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+
+/* Styl dla całej sekcji dodawania opinii */
+.add-review-section {
+    background: #ffffff;
+    border: 1px solid #edf2f7;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.section-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    color: #2d3748;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Wybór oceny */
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #4a5568;
+}
+
+.rating-select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e0;
+    background: white;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.rating-select:focus {
+    border-color: #3498db;
+}
+
+/* Pole tekstowe */
+.review-textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e0;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    outline: none;
+    transition: all 0.2s;
+    box-sizing: border-box;
+}
+
+.review-textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Obsługa błędu */
+.review-textarea.input-error {
+    border-color: #e74c3c;
+    background-color: #fff5f5;
+}
+
+.error-text {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Przycisk wysyłania */
+.btn-submit {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    align-self: flex-start;
+}
+
+.btn-submit:hover {
+    background: #2980b9;
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+.btn-submit:disabled {
+    background: #a0aec0;
+    cursor: not-allowed;
+}
+
+.admin-actions-clean {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.admin-link-small {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.admin-link-small.edit {
+    background-color: #ebf8ff;
+    color: #2b6cb0;
+}
+
+.admin-link-small.edit:hover {
+    background-color: #bee3f8;
+    color: #2c5282;
+}
+
+.admin-link-small.delete {
+    background-color: #fff5f5;
+    color: #c53030;
+}
+
+.admin-link-small.delete:hover {
+    background-color: #fed7d7;
+    color: #9b2c2c;
+}
+
+.details-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: 1px solid #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #4a5568;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.back-btn .arrow {
+    transition: transform 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e0;
+    color: #2d3748;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.back-btn:hover .arrow {
+    transform: translateX(-4px);
+}
